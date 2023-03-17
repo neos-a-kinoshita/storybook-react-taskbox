@@ -8,7 +8,7 @@ export default function InboxScreen() {
   const { error } = useSelector((state) => state.taskbox);
   useEffect(() => {
     dispatch(fetchTasks());
-  }, []);
+  }, [dispatch]);
 
   if (error) {
     return (
